@@ -16,7 +16,7 @@
 <meta name="author" content="서선범"/>
 <meta name="keywords" content="파이썬,업무자동화,AI활용,OpenAI,LangChain,Streamlit,RAG,교육"/><noscript></noscript>
 <noscript></noscript>
-<style>:root{--jet:#204C92;--jet-dark:#0d1b40;--jet-mid:#163470;--spark:#2563EB;--spark-light:#DBEAFE;--accent:#10B981;--warn:#F59E0B;--danger:#EF4444;--n50:#F8FAFC;--n100:#F1F5F9;--n200:#E2E8F0;--n600:#475569;--n700:#334155;--n800:#1E293B;--sidebar-w:272px;--topbar-h:56px;--r-md:8px;--font:'Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','Nanum Gothic',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%;overflow:hidden}body{font-family:var(--font);background:var(--n50);color:var(--n800);line-height:1.7}.app-layout{display:flex;height:100dvh;overflow:hidden}#cover{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(155deg,var(--jet-dark)0%,var(--jet)100%);color:white;padding:48px 24px;text-align:center;position:relative;overflow-y:auto}#cover::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04)1px,transparent 1px);background-size:28px 28px;pointer-events:none}.cover-inner{position:relative;z-index:1;max-width:720px;width:100%}.cover-tag{display:inline-block;background:rgba(37,99,235,.3);border:1px solid rgba(37,99,235,.5);border-radius:9999px;padding:4px 16px;font-size:.72rem;font-weight:700;color:#93c5fd;letter-spacing:.07em;margin-bottom:22px}.cover-h1{font-size:clamp(1.5rem,5vw,3rem);font-weight:900;line-height:1.15;margin-bottom:8px}.cover-h1 span{color:#60a5fa}.cover-sub{font-size:1rem;color:rgba(255,255,255,.6);margin-bottom:20px;line-height:1.75}.cover-kpi{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:20px;flex-wrap:wrap}.kpi-item{padding:10px 14px;text-align:center}.kpi-num{font-size:2rem;font-weight:900;color:#60a5fa}.kpi-label{font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;font-weight:600}.kpi-sep{width:1px;height:40px;background:rgba(255,255,255,.12)}.cover-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}.cv-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;text-align:left}.cv-num{font-size:.63rem;color:#60a5fa;font-weight:700;margin-bottom:3px}.cv-title{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.85);line-height:1.3}.btn-start{display:inline-flex;align-items:center;gap:8px;background:var(--spark);color:white;border:none;border-radius:9999px;padding:14px 36px;font-size:1rem;font-weight:800;cursor:pointer;box-shadow:0 4px 20px rgba(37,99,235,.45);transition:all .2s;font-family:var(--font)}.btn-start:hover{background:#1d4ed8;transform:translateY(-1px)}.sidebar{width:var(--sidebar-w);flex-shrink:0;background:linear-gradient(180deg,var(--jet-dark)0%,var(--jet-mid)100%);display:flex;flex-direction:column;overflow:hidden;z-index:20;transition:transform .3s cubic-bezier(.4,0,.2,1)}.sb-logo{padding:18px 20px 14px;border-bottom:1px solid rgba(255,255,255,.08)}.sb-logo-badge{display:inline-block;background:rgba(37,99,235,.35);border:1px solid rgba(37,99,235,.5);border-radius:9999px;padding:2px 10px;font-size:.63rem;font-weight:700;color:#93c5fd;letter-spacing:.06em;margin-bottom:6px}.sb-logo-title{font-size:.9rem;font-weight:800;color:white;line-height:1.3}.sb-logo-sub{font-size:.68rem;color:rgba(255,255,255,.4);margin-top:2px}.sb-nav{flex:1;overflow-y:auto;padding:8px 0;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.15) transparent}.sb-nav::-webkit-scrollbar{width:4px}.sb-nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:2px}.nav-group-label{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.7rem;font-weight:800;color:rgba(255,255,255,.5);letter-spacing:.08em;cursor:pointer;transition:color .15s}.nav-group-label:hover{color:rgba(255,255,255,.8)}.nav-num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:rgba(255,255,255,.12);border-radius:4px;font-size:.63rem;font-weight:800;flex-shrink:0}.nav-item{display:flex;align-items:center;gap:8px;padding:7px 16px 7px 40px;font-size:.78rem;color:rgba(255,255,255,.55);cursor:pointer;transition:all .15s;border-left:2px solid transparent}.nav-item:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.9)}.nav-item.active{background:rgba(37,99,235,.2);color:#93c5fd;border-left-color:#3b82f6;font-weight:700}.nav-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25);flex-shrink:0}.nav-item.active .nav-dot{background:#3b82f6}.sb-footer{padding:12px 16px;border-top:1px solid rgba(255,255,255,.08);font-size:.66rem;color:rgba(255,255,255,.3)}#sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99}.main-area{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}.topbar{position:sticky;top:0;z-index:110;height:var(--topbar-h);display:flex;align-items:center;padding:0 20px;gap:12px;background:rgba(248,250,252,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--n200)}.btn-menu{display:none;width:36px;height:36px;align-items:center;justify-content:center;border:1px solid var(--n200);border-radius:var(--r-md);background:white;cursor:pointer;flex-shrink:0}.topbar-title{flex:1;font-size:clamp(.82rem,2vw,1rem);font-weight:800;color:var(--jet);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ch-badge{font-size:.72rem;color:var(--n600);background:var(--n100);border:1px solid var(--n200);border-radius:6px;padding:3px 10px;font-weight:700;white-space:nowrap}.btn-nav{height:34px;padding:0 14px;border-radius:9999px;font-size:.78rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:var(--font)}.btn-prev{background:var(--n100);border:1px solid var(--n200);color:var(--n600)}.btn-prev:hover:not(:disabled){background:var(--n200)}.btn-next{background:var(--spark);border:none;color:white;box-shadow:0 2px 8px rgba(37,99,235,.35)}.btn-next:hover:not(:disabled){background:#1d4ed8}.btn-nav:disabled{opacity:.4;cursor:not-allowed}.content-scroll{flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}.content-scroll::-webkit-scrollbar{width:5px}.content-scroll::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}.ch-page{padding:0 0 40px}.ch-hero{background:linear-gradient(135deg,var(--jet-dark)0%,var(--jet)100%);padding:28px 28px 24px;color:white;position:relative;overflow:hidden}.ch-hero::after{content:"";position:absolute;right:-20px;top:-20px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.04)}.ch-hero-badge{display:inline-block;background:rgba(37,99,235,.4);border:1px solid rgba(37,99,235,.6);border-radius:9999px;padding:3px 12px;font-size:.66rem;font-weight:700;color:#93c5fd;margin-bottom:10px}.ch-hero-title{font-size:clamp(1.1rem,3vw,1.55rem);font-weight:900;margin-bottom:8px}.ch-hero-desc{font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.7}.ch-hero-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.ch-tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:3px 10px;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.7)}.progress-bar{height:4px;background:rgba(255,255,255,.15);border-radius:2px;margin:14px 0 4px}.progress-fill{height:100%;background:#3b82f6;border-radius:2px;transition:width .4s}.progress-text{font-size:.64rem;color:rgba(255,255,255,.4)}.ch-body{padding:18px 22px 0}.section-card{background:white;border:1px solid var(--n200);border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}.section-card h3{font-size:.92rem;font-weight:800;color:var(--jet);padding-bottom:10px;margin-bottom:12px;border-bottom:2px solid #EBF0FB;display:flex;align-items:center;gap:8px}.s-icon{width:24px;height:24px;background:var(--spark-light);border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}.hl-box{border-radius:10px;padding:12px 16px;margin:8px 0;font-size:.84rem;line-height:1.75}.hl-info{background:#EBF0FB;border-left:4px solid var(--jet);color:var(--n800)}.hl-tip{background:#fefce8;border-left:4px solid var(--warn);color:var(--n800)}.hl-good{background:#f0fdf4;border-left:4px solid var(--accent);color:var(--n800)}.hl-warn{background:#fff7ed;border-left:4px solid #f97316;color:var(--n800)}.hl-ai{background:#f5f3ff;border-left:4px solid #7c3aed;color:var(--n800)}.step-list{list-style:none;padding:0;margin:8px 0}.step-item{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--n50)}.step-item:last-child{border-bottom:none}.step-num{width:20px;height:20px;border-radius:50%;background:var(--spark);color:white;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;flex-shrink:0;margin-top:2px}.step-txt{flex:1;font-size:.83rem;line-height:1.75;color:var(--n700)}.step-txt strong{color:var(--jet)}.code-label{font-size:.63rem;font-weight:700;color:var(--n600);letter-spacing:.05em;margin-bottom:5px;font-family:monospace}.code-block{background:#0f172a;border-radius:10px;padding:14px 16px;margin:8px 0;overflow-x:auto;border:1px solid rgba(255,255,255,.05)}.code-block pre{font-family:'JetBrains Mono','Courier New',monospace;font-size:.76rem;line-height:1.8;color:#e2e8f0;white-space:pre;margin:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}.mini-card{background:var(--n50);border:1px solid var(--n200);border-radius:10px;padding:11px 13px}.mini-card-title{font-size:.76rem;font-weight:700;color:var(--jet);margin-bottom:4px}.mini-card-desc{font-size:.72rem;color:var(--n600);line-height:1.6}.ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.ref-card{background:var(--n50);border:1px solid var(--n200);border-radius:10px;padding:13px}.ref-card a{font-size:.78rem;font-weight:700;color:var(--spark);text-decoration:none;display:block;margin-bottom:3px}.ref-card a:hover{text-decoration:underline}.ref-card p{font-size:.7rem;color:var(--n600);margin:0;line-height:1.5}@media(max-width:900px){#cover{padding:28px 16px;}.sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);box-shadow:0 0 40px rgba(0,0,0,.3);z-index:100}.sidebar.open{transform:translateX(0)}.btn-menu{display:flex!important}.topbar{padding:0 10px;gap:8px}.topbar-title{font-size:.82rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.btn-nav{height:30px;padding:0 10px;font-size:.72rem}.ch-hero{padding:18px 14px 16px}.ch-body{padding:12px 12px 0}}@media(max-width:600px){.cover-grid{grid-template-columns:1fr 1fr;max-height:184px;overflow:hidden}.grid-2{grid-template-columns:1fr}.ref-grid{grid-template-columns:1fr 1fr}}@media(max-width:480px){.cover-grid{grid-template-columns:1fr 1fr;max-height:184px;overflow:hidden}.ref-grid{grid-template-columns:1fr}.topbar{padding:0 8px;gap:6px}.btn-nav{height:28px;padding:0 8px;font-size:.7rem}}.ch-nav-bar{display:flex;gap:12px;padding:24px 0 8px;margin-top:4px;justify-content:center;align-items:center}.ch-nav-btn{width:160px;height:48px;border-radius:12px;font-size:.88rem;font-weight:800;cursor:pointer;transition:all .2s;font-family:var(--font);display:flex;align-items:center;justify-content:center;gap:8px;border:none}.ch-nav-prev{background:var(--n100);border:1.5px solid var(--n200)!important;color:var(--n600)}.ch-nav-prev:hover:not(:disabled){background:var(--n200)}.ch-nav-next{background:var(--spark);color:white;box-shadow:0 4px 12px rgba(37,99,235,.35)}.ch-nav-next:hover:not(:disabled){background:#1d4ed8}.ch-nav-btn:disabled{opacity:.35;cursor:not-allowed}.ch-nav-home{background:var(--jet-dark);color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.15)!important;width:48px;flex-shrink:0}.ch-nav-home:hover{background:var(--jet)}.section-h2{display:flex;align-items:center;gap:10px;font-size:1.02rem;font-weight:800;color:#fff;background:linear-gradient(90deg,var(--jet) 0%,var(--spark) 100%);padding:10px 18px;border-radius:10px;margin:18px 0 10px;letter-spacing:-.3px;box-shadow:0 2px 8px rgba(32,76,146,.18)}.section-h2 .sh2-num{min-width:24px;height:24px;background:rgba(255,255,255,.22);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:900}.code-wrap{position:relative}.copy-btn{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:6px;color:rgba(255,255,255,.7);font-size:.68rem;font-weight:700;padding:3px 10px;cursor:pointer;transition:all .15s;font-family:var(--font)}.copy-btn:hover{background:rgba(255,255,255,.22);color:#fff}.copy-btn.copied{background:rgba(16,185,129,.3);border-color:#10B981;color:#6ee7b7}.practice-box{background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%);border:1.5px solid #6ee7b7;border-radius:12px;padding:16px 18px;margin:10px 0}.practice-box h4{font-size:.84rem;font-weight:800;color:#065f46;margin-bottom:10px;display:flex;align-items:center;gap:6px}.checklist{list-style:none;padding:0;margin:0}.checklist li{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:#1e293b;cursor:pointer;border-radius:6px;transition:background .1s;padding-left:4px}.checklist li:hover{background:rgba(16,185,129,.08)}.checklist li input[type=checkbox]{width:15px;height:15px;accent-color:#10B981;cursor:pointer;flex-shrink:0;margin-top:2px}.checklist li.checked{color:#64748b;text-decoration:line-through}.quiz-box{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);border:1.5px solid #93c5fd;border-radius:12px;padding:16px 18px;margin:10px 0}.quiz-box h4{font-size:.84rem;font-weight:800;color:#1e40af;margin-bottom:10px;display:flex;align-items:center;gap:6px}.quiz-q{font-size:.84rem;color:#1e293b;margin-bottom:10px;font-weight:600}.quiz-opts{display:flex;flex-direction:column;gap:6px}.quiz-opt{background:white;border:1.5px solid #bfdbfe;border-radius:8px;padding:8px 12px;font-size:.8rem;color:#334155;cursor:pointer;transition:all .15s;text-align:left}.quiz-opt:hover{border-color:#3b82f6;background:#eff6ff;color:#1e40af}.quiz-opt.correct{background:#f0fdf4;border-color:#10B981;color:#065f46;font-weight:700}.quiz-opt.wrong{background:#fff1f2;border-color:#fca5a5;color:#991b1b}.quiz-result{margin-top:8px;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:6px;display:none}.quiz-result.show{display:block}.quiz-result.ok{background:#f0fdf4;color:#065f46}.quiz-result.ng{background:#fff1f2;color:#991b1b}.nav-item.done .nav-dot{background:#10B981;}.nav-group-label.done-ch span:first-child+span{text-decoration:line-through;opacity:.7;}.progress-ring{font-size:.72rem;font-weight:700;color:var(--n600);background:var(--n100);border:1px solid var(--n200);border-radius:9999px;padding:3px 10px;white-space:nowrap;flex-shrink:0;}.sb-progress{height:3px;background:rgba(255,255,255,.12);border-radius:0;}.sb-progress-fill{height:100%;background:linear-gradient(90deg,#10B981,#3b82f6);transition:width .5s;}</style>
+<style>:root{--jet:#204C92;--jet-dark:#0d1b40;--jet-mid:#163470;--spark:#2563EB;--spark-light:#DBEAFE;--accent:#10B981;--warn:#F59E0B;--danger:#EF4444;--n50:#F8FAFC;--n100:#F1F5F9;--n200:#E2E8F0;--n600:#475569;--n700:#334155;--n800:#1E293B;--sidebar-w:272px;--topbar-h:56px;--r-md:8px;--font:'Noto Sans KR','Apple SD Gothic Neo','맑은 고딕','Malgun Gothic','Nanum Gothic',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%;overflow:hidden}body{font-family:var(--font);background:var(--n50);color:var(--n800);line-height:1.7}.app-layout{display:flex;height:100dvh;overflow:hidden}#cover{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(155deg,var(--jet-dark)0%,var(--jet)100%);color:white;padding:48px 24px;text-align:center;position:relative;overflow-y:auto}#cover::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.04)1px,transparent 1px);background-size:28px 28px;pointer-events:none}.cover-inner{position:relative;z-index:1;max-width:720px;width:100%}.cover-tag{display:inline-block;background:rgba(37,99,235,.3);border:1px solid rgba(37,99,235,.5);border-radius:9999px;padding:4px 16px;font-size:.72rem;font-weight:700;color:#93c5fd;letter-spacing:.07em;margin-bottom:22px}.cover-h1{font-size:clamp(1.5rem,5vw,3rem);font-weight:900;line-height:1.15;margin-bottom:8px}.cover-h1 span{color:#60a5fa}.cover-sub{font-size:1rem;color:rgba(255,255,255,.6);margin-bottom:20px;line-height:1.75}.cover-kpi{display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:20px;flex-wrap:wrap}.kpi-item{padding:10px 14px;text-align:center}.kpi-num{font-size:2rem;font-weight:900;color:#60a5fa}.kpi-label{font-size:.7rem;color:rgba(255,255,255,.5);margin-top:2px;font-weight:600}.kpi-sep{width:1px;height:40px;background:rgba(255,255,255,.12)}.cover-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}.cv-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;text-align:left}.cv-num{font-size:.63rem;color:#60a5fa;font-weight:700;margin-bottom:3px}.cv-title{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.85);line-height:1.3}.btn-start{display:inline-flex;align-items:center;gap:8px;background:var(--spark);color:white;border:none;border-radius:9999px;padding:14px 36px;font-size:1rem;font-weight:800;cursor:pointer;box-shadow:0 4px 20px rgba(37,99,235,.45);transition:all .2s;font-family:var(--font)}.btn-start:hover{background:#1d4ed8;transform:translateY(-1px)}.sidebar{width:var(--sidebar-w);flex-shrink:0;background:linear-gradient(180deg,var(--jet-dark)0%,var(--jet-mid)100%);display:flex;flex-direction:column;overflow:hidden;z-index:20;transition:transform .3s cubic-bezier(.4,0,.2,1)}.sb-logo{padding:18px 20px 14px;border-bottom:1px solid rgba(255,255,255,.08)}.sb-logo-badge{display:inline-block;background:rgba(37,99,235,.35);border:1px solid rgba(37,99,235,.5);border-radius:9999px;padding:2px 10px;font-size:.63rem;font-weight:700;color:#93c5fd;letter-spacing:.06em;margin-bottom:6px}.sb-logo-title{font-size:.9rem;font-weight:800;color:white;line-height:1.3}.sb-logo-sub{font-size:.68rem;color:rgba(255,255,255,.4);margin-top:2px}.sb-nav{flex:1;overflow-y:auto;padding:8px 0;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.15) transparent}.sb-nav::-webkit-scrollbar{width:4px}.sb-nav::-webkit-scrollbar-thumb{background:rgba(255,255,255,.15);border-radius:2px}.nav-group-label{display:flex;align-items:center;gap:8px;padding:8px 16px;font-size:.7rem;font-weight:800;color:rgba(255,255,255,.5);letter-spacing:.08em;cursor:pointer;transition:color .15s}.nav-group-label:hover{color:rgba(255,255,255,.8)}.nav-num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:rgba(255,255,255,.12);border-radius:4px;font-size:.63rem;font-weight:800;flex-shrink:0}.nav-item{display:flex;align-items:center;gap:8px;padding:7px 16px 7px 40px;font-size:.78rem;color:rgba(255,255,255,.55);cursor:pointer;transition:all .15s;border-left:2px solid transparent}.nav-item:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.9)}.nav-item.active{background:rgba(37,99,235,.2);color:#93c5fd;border-left-color:#3b82f6;font-weight:700}.nav-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25);flex-shrink:0}.nav-item.active .nav-dot{background:#3b82f6}.sb-footer{padding:12px 16px;border-top:1px solid rgba(255,255,255,.08);font-size:.66rem;color:rgba(255,255,255,.3)}#sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99}.main-area{flex:1;min-width:0;display:flex;flex-direction:column;overflow:hidden}.topbar{position:sticky;top:0;z-index:110;height:var(--topbar-h);display:flex;align-items:center;padding:0 20px;gap:12px;background:rgba(248,250,252,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--n200)}.btn-menu{display:none;width:36px;height:36px;align-items:center;justify-content:center;border:1px solid var(--n200);border-radius:var(--r-md);background:white;cursor:pointer;flex-shrink:0}.topbar-title{flex:1;font-size:clamp(.82rem,2vw,1rem);font-weight:800;color:var(--jet);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ch-badge{font-size:.72rem;color:var(--n600);background:var(--n100);border:1px solid var(--n200);border-radius:6px;padding:3px 10px;font-weight:700;white-space:nowrap}.btn-nav{height:34px;padding:0 14px;border-radius:9999px;font-size:.78rem;font-weight:700;cursor:pointer;transition:all .2s;font-family:var(--font)}.btn-prev{background:var(--n100);border:1px solid var(--n200);color:var(--n600)}.btn-prev:hover:not(:disabled){background:var(--n200)}.btn-next{background:var(--spark);border:none;color:white;box-shadow:0 2px 8px rgba(37,99,235,.35)}.btn-next:hover:not(:disabled){background:#1d4ed8}.btn-nav:disabled{opacity:.4;cursor:not-allowed}.content-scroll{flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}.content-scroll::-webkit-scrollbar{width:5px}.content-scroll::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:3px}.ch-page{padding:0 0 40px}.ch-hero{background:linear-gradient(135deg,var(--jet-dark)0%,var(--jet)100%);padding:28px 28px 24px;color:white;position:relative;overflow:hidden}.ch-hero::after{content:"";position:absolute;right:-20px;top:-20px;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.04)}.ch-hero-badge{display:inline-block;background:rgba(37,99,235,.4);border:1px solid rgba(37,99,235,.6);border-radius:9999px;padding:3px 12px;font-size:.66rem;font-weight:700;color:#93c5fd;margin-bottom:10px}.ch-hero-title{font-size:clamp(1.1rem,3vw,1.55rem);font-weight:900;margin-bottom:8px}.ch-hero-desc{font-size:.84rem;color:rgba(255,255,255,.65);line-height:1.7}.ch-hero-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.ch-tag{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:3px 10px;font-size:.68rem;font-weight:600;color:rgba(255,255,255,.7)}.progress-bar{height:4px;background:rgba(255,255,255,.15);border-radius:2px;margin:14px 0 4px}.progress-fill{height:100%;background:#3b82f6;border-radius:2px;transition:width .4s}.progress-text{font-size:.64rem;color:rgba(255,255,255,.4)}.ch-body{padding:18px 22px 0}.section-card{background:white;border:1px solid var(--n200);border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}.section-card h3{font-size:.92rem;font-weight:800;color:var(--jet);padding-bottom:10px;margin-bottom:12px;border-bottom:2px solid #EBF0FB;display:flex;align-items:center;gap:8px}.s-icon{width:24px;height:24px;background:var(--spark-light);border-radius:7px;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}.hl-box{border-radius:10px;padding:12px 16px;margin:8px 0;font-size:.84rem;line-height:1.75}.hl-info{background:#EBF0FB;border-left:4px solid var(--jet);color:var(--n800)}.hl-tip{background:#fefce8;border-left:4px solid var(--warn);color:var(--n800)}.hl-good{background:#f0fdf4;border-left:4px solid var(--accent);color:var(--n800)}.hl-warn{background:#fff7ed;border-left:4px solid #f97316;color:var(--n800)}.hl-ai{background:#f5f3ff;border-left:4px solid #7c3aed;color:var(--n800)}.step-list{list-style:none;padding:0;margin:8px 0}.step-item{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--n50)}.step-item:last-child{border-bottom:none}.step-num{width:20px;height:20px;border-radius:50%;background:var(--spark);color:white;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:800;flex-shrink:0;margin-top:2px}.step-txt{flex:1;font-size:.83rem;line-height:1.75;color:var(--n700)}.step-txt strong{color:var(--jet)}.code-label{font-size:.63rem;font-weight:700;color:var(--n600);letter-spacing:.05em;margin-bottom:5px;font-family:monospace}.code-block{background:#0f172a;border-radius:10px;padding:14px 16px;margin:8px 0;overflow-x:auto;border:1px solid rgba(255,255,255,.05)}.code-block pre{font-family:'JetBrains Mono','Courier New',monospace;font-size:.76rem;line-height:1.8;color:#e2e8f0;white-space:pre;margin:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:8px 0}.mini-card{background:var(--n50);border:1px solid var(--n200);border-radius:10px;padding:11px 13px}.mini-card-title{font-size:.76rem;font-weight:700;color:var(--jet);margin-bottom:4px}.mini-card-desc{font-size:.72rem;color:var(--n600);line-height:1.6}.ref-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.ref-card{background:var(--n50);border:1px solid var(--n200);border-radius:10px;padding:13px}.ref-card a{font-size:.78rem;font-weight:700;color:var(--spark);text-decoration:none;display:block;margin-bottom:3px}.ref-card a:hover{text-decoration:underline}.ref-card p{font-size:.7rem;color:var(--n600);margin:0;line-height:1.5}@media(max-width:900px){#cover{padding:28px 16px;}.sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);box-shadow:0 0 40px rgba(0,0,0,.3);z-index:100}.sidebar.open{transform:translateX(0)}.btn-menu{display:flex!important}.topbar{padding:0 10px;gap:8px}.topbar-title{font-size:.82rem;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.btn-nav{height:30px;padding:0 10px;font-size:.72rem}.ch-hero{padding:18px 14px 16px}.ch-body{padding:12px 12px 0}}@media(max-width:600px){.cover-grid{grid-template-columns:1fr 1fr;max-height:184px;overflow:hidden}.grid-2{grid-template-columns:1fr}.ref-grid{grid-template-columns:1fr 1fr}}@media(max-width:480px){.cover-grid{grid-template-columns:1fr 1fr;max-height:184px;overflow:hidden}.ref-grid{grid-template-columns:1fr}.topbar{padding:0 8px;gap:6px}.btn-nav{height:28px;padding:0 8px;font-size:.7rem}}.ch-nav-bar{display:flex;gap:12px;padding:24px 0 8px;margin-top:4px;justify-content:center;align-items:center}.ch-nav-btn{width:160px;height:48px;border-radius:12px;font-size:.88rem;font-weight:800;cursor:pointer;transition:all .2s;font-family:var(--font);display:flex;align-items:center;justify-content:center;gap:8px;border:none}.ch-nav-prev{background:var(--n100);border:1.5px solid var(--n200)!important;color:var(--n600)}.ch-nav-prev:hover:not(:disabled){background:var(--n200)}.ch-nav-next{background:var(--spark);color:white;box-shadow:0 4px 12px rgba(37,99,235,.35)}.ch-nav-next:hover:not(:disabled){background:#1d4ed8}.ch-nav-btn:disabled{opacity:.35;cursor:not-allowed}.ch-nav-home{background:var(--jet-dark);color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.15)!important;width:48px;flex-shrink:0}.ch-nav-home:hover{background:var(--jet)}.section-h2{display:flex;align-items:center;gap:10px;font-size:1.02rem;font-weight:800;color:#fff;background:linear-gradient(90deg,var(--jet) 0%,var(--spark) 100%);padding:10px 18px;border-radius:10px;margin:18px 0 10px;letter-spacing:-.3px;box-shadow:0 2px 8px rgba(32,76,146,.18)}.section-h2 .sh2-num{min-width:24px;height:24px;background:rgba(255,255,255,.22);border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:900}.code-wrap{position:relative}.copy-btn{position:absolute;top:8px;right:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:6px;color:rgba(255,255,255,.7);font-size:.68rem;font-weight:700;padding:3px 10px;cursor:pointer;transition:all .15s;font-family:var(--font)}.copy-btn:hover{background:rgba(255,255,255,.22);color:#fff}.copy-btn.copied{background:rgba(16,185,129,.3);border-color:#10B981;color:#6ee7b7}.practice-box{background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%);border:1.5px solid #6ee7b7;border-radius:12px;padding:16px 18px;margin:10px 0}.practice-box h4{font-size:.84rem;font-weight:800;color:#065f46;margin-bottom:10px;display:flex;align-items:center;gap:6px}.checklist{list-style:none;padding:0;margin:0}.checklist li{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.82rem;color:#1e293b;cursor:pointer;border-radius:6px;transition:background .1s;padding-left:4px}.checklist li:hover{background:rgba(16,185,129,.08)}.checklist li input[type=checkbox]{width:15px;height:15px;accent-color:#10B981;cursor:pointer;flex-shrink:0;margin-top:2px}.checklist li.checked{color:#64748b;text-decoration:line-through}.quiz-box{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);border:1.5px solid #93c5fd;border-radius:12px;padding:16px 18px;margin:10px 0}.quiz-box h4{font-size:.84rem;font-weight:800;color:#1e40af;margin-bottom:10px;display:flex;align-items:center;gap:6px}.quiz-q{font-size:.84rem;color:#1e293b;margin-bottom:10px;font-weight:600}.quiz-opts{display:flex;flex-direction:column;gap:6px}.quiz-opt{background:white;border:1.5px solid #bfdbfe;border-radius:8px;padding:8px 12px;font-size:.8rem;color:#334155;cursor:pointer;transition:all .15s;text-align:left}.quiz-opt:hover{border-color:#3b82f6;background:#eff6ff;color:#1e40af}.quiz-opt.correct{background:#f0fdf4;border-color:#10B981;color:#065f46;font-weight:700}.quiz-opt.wrong{background:#fff1f2;border-color:#fca5a5;color:#991b1b}.quiz-result{margin-top:8px;font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:6px;display:none}.quiz-result.show{display:block}.quiz-result.ok{background:#f0fdf4;color:#065f46}.quiz-result.ng{background:#fff1f2;color:#991b1b}.nav-item.done .nav-dot{background:#10B981;}.nav-group-label.done-ch span:first-child+span{text-decoration:line-through;opacity:.7;}.progress-ring{font-size:.72rem;font-weight:700;color:var(--n600);background:var(--n100);border:1px solid var(--n200);border-radius:9999px;padding:3px 10px;white-space:nowrap;flex-shrink:0;}.sb-progress{height:3px;background:rgba(255,255,255,.12);border-radius:0;}.sb-progress-fill{height:100%;background:linear-gradient(90deg,#10B981,#3b82f6);transition:width .5s;}.code-hl{background:#fde047;color:#1e293b;border-radius:3px;padding:0 2px;font-weight:700;}</style>
 </head>
 <body>
 <script type="text/html" id="content-ch01">
@@ -55,9 +55,7 @@ source venv/bin/activate
 # 성공하면 터미널 앞에 (venv) 글자가 붙습니다
 
 # [Step 3] requirements.txt 파일로 패키지 한 번에 설치 (약 2~3분)
-pip install -r requirements.txt</pre></div></div><div class="hl-box hl-tip"><strong>📄 requirements.txt 파일 만들기</strong><br/>프로젝트 루트 폴더에 <code>requirements.txt</code> 파일을 만들고 아래 내용을 붙여넣으세요.<br/>
-<div class="code-label">requirements.txt — 이 강의에서 사용하는 전체 패키지</div>
-<div class="code-block"><pre>pandas
+pip install -r requirements.txt</pre></div></div><div class="hl-box hl-tip"><strong>📄 requirements.txt 파일 만들기</strong><br/>프로젝트 루트 폴더에 <code>requirements.txt</code> 파일을 만들고 아래 내용을 붙여넣으세요.<br/><div class="code-label">requirements.txt — 이 강의에서 사용하는 전체 패키지</div><div class="code-block"><pre>pandas
 openpyxl
 fpdf2
 python-docx
@@ -100,7 +98,7 @@ def organize_by_month(folder_path):
         print(f"  이동: {filename} -> {month_folder}/")
 
 # 여기에 정리할 폴더 경로를 입력하세요
-organize_by_month("C:/Users/사용자이름/Downloads")</pre></div><div class="hl-box hl-good"><strong>응용 아이디어:</strong> ① 확장자별 분류 (.pdf, .xlsx, .docx 폴더) ② 프로젝트명 기준 분류 ③ 윈도우 작업 스케줄러로 매주 자동 실행</div></div><div class="section-h2"><span class="sh2-num">2</span>파일 월별 정리하기</div><div class="section-card"><h3><span class="s-icon">📄</span>PDF 자동 대량 생성</h3><div class="hl-box hl-tip"><strong>📖 실제 상황:</strong><br/>구매팀 최 프로은 매월 50개 거래처에 납품 확인서 PDF를 만들어야 합니다.<br/>이름, 금액, 날짜만 다른데 PDF를 50번 수작업으로 만드는 데 2시간이 걸렸습니다.<br/><br/>→ 거래처 목록 Excel이 있으면 <strong>PDF 50개를 1분 안에 자동 생성</strong>할 수 있습니다.</div><div class="code-label">create_pdf.py</div><div class="code-block"><pre>from fpdf import FPDF
+organize_by_month(<span class="code-hl">"C:/Users/사용자이름/Downloads"</span>)</pre></div><div class="hl-box hl-good"><strong>응용 아이디어:</strong> ① 확장자별 분류 (.pdf, .xlsx, .docx 폴더) ② 프로젝트명 기준 분류 ③ 윈도우 작업 스케줄러로 매주 자동 실행</div></div><div class="section-h2"><span class="sh2-num">2</span>파일 월별 정리하기</div><div class="section-card"><h3><span class="s-icon">📄</span>PDF 자동 대량 생성</h3><div class="hl-box hl-tip"><strong>📖 실제 상황:</strong><br/>구매팀 최 프로은 매월 50개 거래처에 납품 확인서 PDF를 만들어야 합니다.<br/>이름, 금액, 날짜만 다른데 PDF를 50번 수작업으로 만드는 데 2시간이 걸렸습니다.<br/><br/>→ 거래처 목록 Excel이 있으면 <strong>PDF 50개를 1분 안에 자동 생성</strong>할 수 있습니다.</div><div class="code-label">create_pdf.py</div><div class="code-block"><pre>from fpdf import FPDF
 import pandas as pd
 
 class ReportPDF(FPDF):
@@ -129,7 +127,7 @@ def create_delivery_pdf(company, amount, date_str, ref_no):
     print(f"  생성: 납품확인서_{ref_no}.pdf")
 
 # 엑셀 파일에서 목록 읽어서 PDF 대량 생성
-df = pd.read_excel("거래처목록.xlsx")
+df = pd.read_excel(<span class="code-hl">"거래처목록.xlsx"</span>)
 for _, row in df.iterrows():
     create_delivery_pdf(row['거래처명'], row['납품금액'], row['날짜'], row['문서번호'])
 
@@ -146,23 +144,23 @@ mpl.rcParams['font.family'] = 'Malgun Gothic'   # Windows
 mpl.rcParams['axes.unicode_minus'] = False        # 마이너스 기호 깨짐 방지
 
 # 1) data 폴더 안의 xlsx 파일 전부 찾기
-files = glob.glob('data/2026_*.xlsx')
+files = glob.glob(<span class="code-hl">'data/2026_*.xlsx'</span>)
 print(f"찾은 파일: {len(files)}개")
 
 # 2) 모든 파일을 하나의 표로 합치기 (엑셀 복붙 12번 = 코드 1줄)
 df = pd.concat([pd.read_excel(f) for f in files], ignore_index=True)
 
 # 3) 날짜 컬럼 변환 후 월(month) 컬럼 추가
-df['날짜'] = pd.to_datetime(df['날짜'])
-df['월'] = df['날짜'].dt.month
+df[<span class="code-hl">'날짜'</span>] = pd.to_datetime(df[<span class="code-hl">'날짜'</span>])
+df['월'] = df[<span class="code-hl">'날짜'</span>].dt.month
 
 # 4) 월별 매출 합계 (엑셀 피벗 테이블 = 코드 1줄)
-monthly = df.groupby('월')['매출액'].sum().reset_index()
+monthly = df.groupby('월')[<span class="code-hl">'매출액'</span>].sum().reset_index()
 
 # 5) 차트 자동 생성 & 파일 저장
 plt.figure(figsize=(12, 6))
 bars = plt.bar(monthly['월'], monthly['매출액'], color='#2563EB')
-plt.title('2026년 월별 매출 현황', fontsize=16)
+plt.title(<span class="code-hl">'2026년 월별 매출 현황'</span>, fontsize=16)
 
 # 막대 위에 금액 숫자 표시
 for bar, val in zip(bars, monthly['매출액']):
@@ -174,27 +172,27 @@ plt.savefig('월별_매출현황.png', dpi=150)
 print("차트 저장 완료: 월별_매출현황.png")</pre></div></div><div class="section-h2"><span class="sh2-num">2</span>VLOOKUP 대신 pandas merge</div><div class="section-card"><h3><span class="s-icon">🔗</span>VLOOKUP 대신 pandas merge — "두 표 자동으로 연결"</h3><div class="hl-box hl-tip"><strong>📖 실제 상황:</strong><br/>"주문내역.xlsx"에는 고객ID + 주문금액이 있고, "고객정보.xlsx"에는 고객ID + 이름·연락처가 있습니다.<br/>VLOOKUP으로 연결하려면 함수를 수천 행에 채워야 합니다.<br/><br/>→ pandas merge 한 줄로 두 표를 즉시 연결합니다. 수만 행도 0.1초.</div><div class="code-label">merge_example.py</div><div class="code-block"><pre>import pandas as pd
 
 # 두 엑셀 파일 읽기
-orders    = pd.read_excel("주문내역.xlsx")   # 고객ID, 주문금액, 날짜
-customers = pd.read_excel("고객정보.xlsx")   # 고객ID, 이름, 연락처, 등급
+orders    = pd.read_excel(<span class="code-hl">"주문내역.xlsx"</span>)   # 고객ID, 주문금액, 날짜
+customers = pd.read_excel(<span class="code-hl">"고객정보.xlsx"</span>)   # 고객ID, 이름, 연락처, 등급
 
 # VLOOKUP 역할 — 공통 키(고객ID)로 두 표 연결
 # how="left" : 왼쪽(주문내역) 기준, 오른쪽에 없어도 행 유지
-result = orders.merge(customers, on='고객ID', how='left')
+result = orders.merge(customers, on=<span class="code-hl">'고객ID'</span>, how='left')
 
 # 결과: 주문금액 + 이름 + 연락처 + 등급이 한 표에!
 print(result.head())
 
 # 엑셀로 저장
-result.to_excel("주문_고객통합.xlsx", index=False)  # index=False: 줄번호 제거
+result.to_excel(<span class="code-hl">"주문_고객통합.xlsx"</span>, index=False)  # index=False: 줄번호 제거
 print(f"완료: {len(result):,}행 저장")</pre></div></div><div class="section-h2"><span class="sh2-num">3</span>상권 분석 실습</div><div class="section-card"><h3><span class="s-icon">🗺️</span>상권 분석 실습 — 공공데이터로 업종별 매출 분석</h3><div class="hl-box hl-tip"><strong>📖 데이터 출처:</strong> data.go.kr → "소상공인 상권정보" 검색 → CSV 무료 다운로드<br/><strong>활용 예시:</strong> 신규 매장 입지 선정 / 경쟁 업종 매출 분석 / 상권 트렌드 파악</div><div class="code-label">area_analysis.py</div><div class="code-block"><pre>import pandas as pd, matplotlib.pyplot as plt, matplotlib as mpl
 
 mpl.rcParams['font.family'] = 'Malgun Gothic'
 
 # 공공데이터 CSV 읽기 (한글 파일은 encoding="cp949")
-df = pd.read_csv('상권분석.csv', encoding='cp949')
+df = pd.read_csv(<span class="code-hl">'상권분석.csv'</span>, encoding='cp949')
 
 # 업종별 월매출 합계 → 내림차순 정렬 → TOP 10
-top10 = df.groupby('업종명')['월매출'].sum().sort_values(ascending=False).head(10)
+top10 = df.groupby(<span class="code-hl">'업종명'</span>)[<span class="code-hl">'월매출'</span>].sum().sort_values(ascending=False).head(10)
 
 # 가로 막대 차트 (긴 업종명에 적합)
 fig, ax = plt.subplots(figsize=(10, 7))
@@ -282,7 +280,7 @@ def create_official_doc(recipient, content, ref_num):
     print(f"  생성: 공문_{ref_num}.docx")
 
 # 엑셀에서 거래처 목록 읽어서 대량 생성
-df = pd.read_excel("거래처목록.xlsx")
+df = pd.read_excel(<span class="code-hl">"거래처목록.xlsx"</span>)
 for _, row in df.iterrows():
     create_official_doc(row['거래처명'], row['내용'], row['문서번호'])
 
@@ -377,7 +375,7 @@ def extract_contract_info(pdf_path):
     return result
 
 # 폴더 안의 모든 PDF 처리
-pdf_files = glob.glob("contracts/*.pdf")
+pdf_files = glob.glob(<span class="code-hl">"contracts/*.pdf"</span>)
 results = [extract_contract_info(f) for f in pdf_files]
 
 # 결과를 엑셀로 저장
@@ -419,7 +417,7 @@ load_dotenv()  # .env 파일에서 이메일·비밀번호 읽기
 def send_email(to_name, to_email, month, attach_path=None):
     """개인화 HTML 이메일 + 첨부파일 발송"""
     msg = MIMEMultipart('alternative')
-    msg['Subject'] = f"[월간 보고] {month}월 거래 실적 보고서"
+    msg['Subject'] = f"<span class="code-hl">[월간 보고] {month}월 거래 실적 보고서</span>"
     msg['From']    = os.getenv('EMAIL')
     msg['To']      = to_email
 
@@ -450,7 +448,7 @@ def send_email(to_name, to_email, month, attach_path=None):
     print(f"  ✅ {to_name} <{to_email}> 발송 완료")
 
 # Excel 목록에서 읽어서 대량 발송
-df = pd.read_excel("메일목록.xlsx")  # 이름, 이메일, 첨부파일경로 컬럼
+df = pd.read_excel(<span class="code-hl">"메일목록.xlsx"</span>)  # 이름, 이메일, 첨부파일경로 컬럼
 for _, row in df.iterrows():
     send_email(row['이름'], row['이메일'], "04", row['첨부파일'])
 
@@ -490,12 +488,12 @@ def summarize_meeting(meeting_text: str) -> str:
     return response.choices[0].message.content
 
 # 테스트 — 실제 회의 내용을 여기에 붙여넣으세요
-meeting_content = """
-참석자: 김팀장, 이 프로, 박 프로
+<span class="code-hl">meeting_content</span> = """
+<span class="code-hl">참석자: 김팀장, 이 프로, 박 프로
 안건1: Q2 마케팅 예산 — 총 500만원, SNS 광고 위주 집행 결정
 안건2: 신규 채용 — 개발자 2명 5월 중 채용 완료 목표
 안건3: 월간 보고서 — 박 프로이 매월 25일까지 초안 제출
-다음 회의: 4월 30일 오전 10시
+다음 회의: 4월 30일 오전 10시</span>
 """
 
 summary = summarize_meeting(meeting_content)
@@ -528,7 +526,7 @@ def generate_ad_copy(product: str, target: str, style: str, num: int = 5):
     return [l.strip() for l in lines if l.strip()]
 
 # 실행 예시
-copies = generate_ad_copy("무설탕 그래놀라", "30대 직장인", "MZ 감성")
+copies = generate_ad_copy(<span class="code-hl">"무설탕 그래놀라"</span>, <span class="code-hl">"30대 직장인"</span>, <span class="code-hl">"MZ 감성"</span>)
 for c in copies:
     print(c)</pre></div></div><div class="section-h2"><span class="sh2-num">2</span>비즈니스 인사이트 도출</div><div class="section-card"><h3><span class="s-icon">📊</span>비즈니스 인사이트 자동 도출 — "데이터 → GPT → 보고서 초안"</h3><div class="hl-box hl-tip"><strong>📖 실제 상황:</strong><br/>경영기획팀 송 프로은 월별 매출 데이터를 보고 "특이점·원인·대응방안"을 보고서에 써야 합니다.<br/>데이터 보고 생각하고 쓰는 데 1시간이 걸립니다.<br/><br/>→ 데이터를 GPT에게 주면 분석 인사이트 초안을 즉시 만들어줍니다. (최종 판단은 사람이)</div><div class="code-label">insight_gen.py</div><div class="code-block"><pre>from openai import OpenAI
 import pandas as pd
@@ -556,8 +554,8 @@ def generate_insight(df: pd.DataFrame, context: str = "") -> str:
     return res.choices[0].message.content
 
 # 월별 매출 데이터 예시
-df = pd.read_excel("월별_매출.xlsx")
-insight = generate_insight(df, context="2026년 월별 매출")
+df = pd.read_excel(<span class="code-hl">"월별_매출.xlsx"</span>)
+insight = generate_insight(df, context=<span class="code-hl">"2026년 월별 매출"</span>)
 print(insight)</pre></div></div><div class="section-h2"><span class="sh2-num">3</span>프롬프트 엔지니어링</div><div class="section-card"><h3><span class="s-icon">📋</span>프롬프트 엔지니어링 핵심 기법</h3><div class="grid-2"><div class="mini-card"><div class="mini-card-title">역할 부여 (Role)</div><div class="mini-card-desc">"당신은 10년 경력 카피라이터입니다."<br/><span style="font-size:.7rem;color:#64748b">전문 역할을 주면 전문가 수준 답변 유도</span></div></div><div class="mini-card"><div class="mini-card-title">예시 포함 (Few-shot)</div><div class="mini-card-desc">"예시: 입력A → 출력A, 입력B → 출력B"<br/><span style="font-size:.7rem;color:#64748b">원하는 형식 예시를 2~3개 보여주면 효과적</span></div></div><div class="mini-card"><div class="mini-card-title">단계별 사고 (CoT)</div><div class="mini-card-desc">"단계별로 생각하여 답하세요."<br/><span style="font-size:.7rem;color:#64748b">복잡한 문제 해결 시 정확도 향상</span></div></div><div class="mini-card"><div class="mini-card-title">출력 형식 지정</div><div class="mini-card-desc">"JSON으로 답변", "표로 정리", "번호 목록으로"<br/><span style="font-size:.7rem;color:#64748b">코드에서 파싱하기 쉬운 형식을 지정</span></div></div></div></div>
 </script>
 <script type="text/html" id="content-ch10">
@@ -590,7 +588,7 @@ def summarize_youtube(url: str) -> str:
     return result['output_text']
 
 # 사용 예시
-url = "https://www.youtube.com/watch?v=VIDEO_ID"
+url = <span class="code-hl">"https://www.youtube.com/watch?v=VIDEO_ID"</span>
 summary = summarize_youtube(url)
 print(summary)</pre></div></div><div class="section-h2"><span class="sh2-num">3</span>웹사이트 자동 요약</div><div class="section-card"><h3><span class="s-icon">💻</span>웹사이트 기사 자동 요약</h3><div class="code-label">web_summary.py</div><div class="code-block"><pre>from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import WebBaseLoader
@@ -608,7 +606,7 @@ def summarize_webpage(url: str) -> str:
     return result['output_text']
 
 # 뉴스 기사 URL
-summary = summarize_webpage("https://n.news.naver.com/article/...")
+summary = summarize_webpage(<span class="code-hl">"https://n.news.naver.com/article/..."</span>)
 print(summary)</pre></div></div><div class="section-h2"><span class="sh2-num">4</span>주요 컴포넌트</div><div class="section-card"><h3><span class="s-icon">📋</span>LangChain 주요 컴포넌트</h3><div class="grid-2"><div class="mini-card"><div class="mini-card-title">Document Loaders</div><div class="mini-card-desc">PDF, 웹, YouTube 등에서 텍스트 로드<br/><span style="font-size:.7rem;color:#64748b">PyPDFLoader, WebBaseLoader, YoutubeLoader</span></div></div><div class="mini-card"><div class="mini-card-title">Text Splitters</div><div class="mini-card-desc">긴 문서를 청크(조각)로 분할<br/><span style="font-size:.7rem;color:#64748b">GPT 토큰 제한 극복을 위해 필요</span></div></div><div class="mini-card"><div class="mini-card-title">Chains</div><div class="mini-card-desc">여러 단계를 하나의 파이프라인으로 연결<br/><span style="font-size:.7rem;color:#64748b">stuff(단순) / map_reduce(대용량) / refine</span></div></div><div class="mini-card"><div class="mini-card-title">Embeddings + VectorStore</div><div class="mini-card-desc">텍스트를 숫자벡터로 변환 후 저장<br/><span style="font-size:.7rem;color:#64748b">RAG(문서 기반 Q&A) 구현의 핵심 (CH11 참고)</span></div></div></div></div>
 </script>
 <script type="text/html" id="content-ch11">
@@ -643,13 +641,13 @@ def build_rag_from_pdf(pdf_path: str):
     return qa_chain
 
 # 구축 (처음 1번만)
-qa = build_rag_from_pdf("사내규정집.pdf")
+qa = build_rag_from_pdf(<span class="code-hl">"사내규정집.pdf"</span>)
 
 # 질문응답
 questions = [
-    "연차 휴가 신청은 어떻게 하나요?",
-    "초과근무 수당 기준이 뭔가요?",
-    "재택근무 신청 방법을 알려주세요.",
+    <span class="code-hl">"연차 휴가 신청은 어떻게 하나요?"</span>,
+    <span class="code-hl">"초과근무 수당 기준이 뭔가요?"</span>,
+    <span class="code-hl">"재택근무 신청 방법을 알려주세요."</span>,
 ]
 for q in questions:
     answer = qa.invoke(q)['result']
@@ -674,7 +672,7 @@ def transcribe_audio(audio_path: str) -> str:
     return transcript
 
 # 회의 녹음 파일 전사
-text = transcribe_audio("회의_2026_04_17.m4a")
+text = transcribe_audio(<span class="code-hl">"회의_2026_04_17.m4a"</span>)
 print(text)
 
 # 텍스트 파일로 저장
@@ -697,14 +695,14 @@ def text_to_speech(text: str, filename: str = "output.mp3", play: bool = True):
             time.sleep(0.1)
 
 # 사용 예시
-text_to_speech("안녕하세요. 오늘의 업무 요약을 말씀드립니다.", "greeting.mp3")
+text_to_speech(<span class="code-hl">"안녕하세요. 오늘의 업무 요약을 말씀드립니다."</span>, <span class="code-hl">"greeting.mp3"</span>)
 
 # GPT 답변을 음성으로 읽어주기
 from openai import OpenAI
 client = OpenAI()
 res = client.chat.completions.create(
     model="gpt-4o-mini",
-    messages=[{"role":"user", "content":"오늘 날씨는 어때?"}]
+    messages=[{"role":"user", "content":<span class="code-hl">"오늘 날씨는 어때?"</span>}]
 )
 answer = res.choices[0].message.content
 text_to_speech(answer, "answer.mp3")</pre></div></div><div class="hl-box hl-good"><strong>💡 응용 아이디어:</strong><br/>① 회의 녹음 → Whisper 전사 → GPT 요약 → 메일 자동 발송 (3단계 파이프라인)<br/>② 사내 공지사항을 음성 파일로 변환하여 게시<br/>③ Streamlit 앱에서 파일 업로드 → 즉시 전사 → 다운로드 버튼</div>
