@@ -1,15 +1,37 @@
 {
-  "name": "python-edu-v24",
-  "version": "24.0.0",
-  "homepage": "https://kk00701903-hub.github.io/pystudy-jette/",
+  "name": "streamlit",
   "private": true,
+  "version": "0.0.0",
+  "homepage": "https://kk00701903-hub.github.io/pystudy-jette/",
+  "type": "module",
   "scripts": {
-    "build": "echo static",
-    "build:dev": "echo static",
-    "deploy": "gh-pages -d src"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test:integration": "playwright test",
+    "test:integration:headed": "playwright test --headed",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
     "gh-pages": "^6.3.0",
-    "typescript": "^5.9.3"
+    "globals": "^17.5.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2",
+    "vite": "^8.0.10"
   }
 }

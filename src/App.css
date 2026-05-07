@@ -1,0 +1,297 @@
+.page {
+  min-height: 100dvh;
+}
+
+#cover {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background: linear-gradient(155deg, #0d1b40 0%, #204c92 100%);
+  color: #fff;
+}
+
+.cover-inner {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.cover-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(147, 197, 253, 0.6);
+  color: #93c5fd;
+  border-radius: 9999px;
+  padding: 4px 14px;
+}
+
+.cover-h1 {
+  margin: 16px 0 8px;
+  line-height: 1.2;
+}
+
+.cover-h1 span {
+  color: #93c5fd;
+}
+
+.cover-sub {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cover-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.cv-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px 12px;
+}
+
+.cv-num {
+  font-size: 11px;
+  color: #93c5fd;
+}
+
+.cv-title {
+  font-size: 13px;
+  color: #fff;
+}
+
+.btn-start {
+  border: 0;
+  border-radius: 9999px;
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.app-layout {
+  display: flex;
+  height: 100dvh;
+}
+
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #0d1b40 0%, #163470 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.sb-logo {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sb-logo-badge {
+  font-size: 11px;
+  color: #93c5fd;
+}
+
+.sb-logo-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sb-logo-sub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.sb-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 6px;
+  overflow: auto;
+  height: calc(100% - 86px);
+}
+
+.nav-item-btn {
+  background: transparent;
+  border: 0;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.nav-item-btn.active {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+.nav-num {
+  width: 20px;
+}
+
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topbar {
+  height: 56px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+}
+
+.topbar-title {
+  flex: 1;
+  font-weight: 700;
+}
+
+.ch-badge {
+  font-size: 12px;
+  color: #334155;
+}
+
+.btn-nav {
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid #dbeafe;
+  background: #fff;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.btn-next {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+}
+
+.content-scroll {
+  flex: 1;
+  overflow: auto;
+  background: #f8fafc;
+}
+
+.ch-page {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.ch-hero {
+  background: linear-gradient(135deg, #0d1b40 0%, #204c92 100%);
+  color: #fff;
+  padding: 20px;
+}
+
+.ch-hero-badge {
+  display: inline-block;
+  font-size: 12px;
+  color: #93c5fd;
+}
+
+.ch-hero-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 6px;
+}
+
+.ch-hero-desc {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ch-hero-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.ch-tag {
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 2px 8px;
+}
+
+.progress-bar {
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #3b82f6;
+}
+
+.progress-text {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.ch-body {
+  padding: 16px;
+}
+
+.section-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.hl-box {
+  border-left: 4px solid #2563eb;
+  background: #eff6ff;
+  padding: 10px 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.hl-tip {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.step-item {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.step-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 99px;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.step-txt {
+  color: #334155;
+}

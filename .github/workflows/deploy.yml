@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["master"] # 팀장님의 브랜치 이름에 맞춰 master로 설정했습니다.
+    branches: ["main", "master"]
 
 permissions:
   contents: read
