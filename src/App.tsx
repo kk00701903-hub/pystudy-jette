@@ -1,5 +1,6 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import './App.css'
+import legacyHtml from './index.html?raw'
 
 type Chapter = {
   id: string
@@ -29,25 +30,148 @@ const chapters: Chapter[] = [
   { id: 'ch15', num: 15, emoji: '☁️', title: 'Streamlit Cloud 웹 배포', desc: 'GitHub 연동과 Cloud 배포 절차를 실습합니다', tags: ['Cloud', '배포'], items: ['배포', 'Secrets'] },
 ]
 
-const chapterContent: Record<string, string> = Object.fromEntries(
-  chapters.map((chapter) => [
-    chapter.id,
-    `<div class="section-card">
-      <h3>${chapter.emoji} ${chapter.title}</h3>
-      <div class="hl-box hl-info">${chapter.desc}</div>
-      <ul class="step-list">${chapter.items
-        .map((item, idx) => `<li class="step-item"><div class="step-num">${idx + 1}</div><div class="step-txt">${item}</div></li>`)
-        .join('')}</ul>
-      <div class="hl-box hl-tip">기존 정적 HTML/JS 구조를 React 상태 기반 네비게이션으로 마이그레이션했습니다.</div>
-    </div>`,
-  ]),
-)
+function extractLegacyChapterContent(source: string): Record<string, string> {
+  const content: Record<string, string> = {}
+  const matcher = /<script type="text\/html" id="content-(ch\d{2})">([\s\S]*?)<\/script>/g
+
+  for (const match of source.matchAll(matcher)) {
+    const id = match[1]
+    const html = match[2]?.trim()
+    if (id && html) content[id] = html
+  }
+
+  return content
+}
 
 function App() {
   const [started, setStarted] = useState(false)
   const [currentIdx, setCurrentIdx] = useState(0)
   const current = chapters[currentIdx]
   const progress = useMemo(() => Math.round(((currentIdx + 1) / chapters.length) * 100), [currentIdx])
+  const chapterContent = useMemo(() => extractLegacyChapterContent(legacyHtml), [])
+
+  useEffect(() => {
+    ;(window as Window & { answerQuiz?: (btn: HTMLButtonElement, correct: boolean, resultId: string, explanation: string) => void }).answerQuiz = (
+      btn,
+      correct,
+      resultId,
+      explanation,
+    ) => {
+      const optionContainer = btn.closest('.quiz-opts')
+      const options = optionContainer?.querySelectorAll<HTMLButtonElement>('.quiz-opt')
+      options?.forEach((option) => {
+        option.disabled = true
+        option.style.cursor = 'default'
+      })
+
+      btn.classList.add(correct ? 'correct' : 'wrong')
+      const result = document.getElementById(resultId)
+      if (!result) return
+      result.className = `quiz-result show ${correct ? 'ok' : 'ng'}`
+      result.innerHTML = correct ? `🎉 정답입니다! ${explanation}` : `❌ 오답입니다. ${explanation}`
+    }
+
+    const onCopyClick = async (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null
+      const btn = target?.closest?.('.copy-btn') as HTMLButtonElement | null
+      if (!btn) return
+
+      const wrap = btn.closest('.code-wrap') as HTMLElement | null
+      const pre = wrap?.querySelector('pre') as HTMLPreElement | null
+      const text = pre?.innerText ?? ''
+      if (!text.trim()) return
+
+      try {
+        await navigator.clipboard.writeText(text)
+        const original = btn.textContent
+        btn.textContent = '✅ 복사됨!'
+        btn.classList.add('copied')
+        window.setTimeout(() => {
+          btn.textContent = original || '📋 복사'
+          btn.classList.remove('copied')
+        }, 1800)
+      } catch {
+        // ignore
+      }
+    }
+
+    document.addEventListener('click', onCopyClick)
+    return () => {
+      document.removeEventListener('click', onCopyClick)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!started) return
+
+    const enhanceCopyButtons = () => {
+      const codeBlocks = Array.from(document.querySelectorAll<HTMLElement>('.ch-body .code-block'))
+      for (const codeBlock of codeBlocks) {
+        const alreadyWrapped = codeBlock.parentElement?.classList.contains('code-wrap')
+        if (alreadyWrapped) continue
+
+        const wrap = document.createElement('div')
+        wrap.className = 'code-wrap'
+        const btn = document.createElement('button')
+        btn.type = 'button'
+        btn.className = 'copy-btn'
+        btn.textContent = '📋 복사'
+
+        codeBlock.parentElement?.insertBefore(wrap, codeBlock)
+        wrap.appendChild(btn)
+        wrap.appendChild(codeBlock)
+      }
+    }
+
+    const enhanceChapter1EnvSteps = () => {
+      // find the legacy venv snippet and replace with step-by-step blocks
+      const pres = Array.from(document.querySelectorAll<HTMLPreElement>('.ch-body pre'))
+      const target = pres.find((pre) => {
+        const t = pre.innerText
+        return t.includes('# [Step 1]') && t.includes('python -m venv venv') && t.includes('pip install -r requirements.txt')
+      })
+      if (!target) return
+
+      const step1 = 'python -m venv venv'
+      const step3 = 'pip install -r requirements.txt'
+      const step2 = `# Windows:\nvenv\\Scripts\\activate\n\n# Mac / Linux:\nsource venv/bin/activate`
+
+      const codeBlock = target.closest('.code-block') as HTMLElement | null
+      if (!codeBlock) return
+
+      // update previous label if it exists
+      const label = codeBlock.previousElementSibling as HTMLElement | null
+      if (label?.classList.contains('code-label')) {
+        label.innerHTML = '💻 각 Step별로 <strong>복사</strong> 버튼을 눌러 터미널에 바로 붙여넣기 하세요'
+      }
+
+      const container = document.createElement('div')
+      container.innerHTML = `
+        <div class="code-label">[Step 1] 가상환경 만들기</div>
+        <div class="code-wrap"><button class="copy-btn" type="button">📋 복사</button><div class="code-block"><pre></pre></div></div>
+
+        <div class="code-label">[Step 2] 가상환경 켜기</div>
+        <div class="code-wrap"><button class="copy-btn" type="button">📋 복사</button><div class="code-block"><pre></pre></div></div>
+        <div class="hl-box hl-info" style="margin-top:6px"><strong>✅ 확인:</strong> 활성화가 되면 터미널 앞에 <code>(venv)</code>가 붙습니다.</div>
+
+        <div class="code-label">[Step 3] requirements.txt로 패키지 설치</div>
+        <div class="code-wrap"><button class="copy-btn" type="button">📋 복사</button><div class="code-block"><pre></pre></div></div>
+      `
+
+      const preEls = Array.from(container.querySelectorAll<HTMLPreElement>('pre'))
+      if (preEls[0]) preEls[0].innerText = step1
+      if (preEls[1]) preEls[1].innerText = step2
+      if (preEls[2]) preEls[2].innerText = step3
+
+      codeBlock.replaceWith(...Array.from(container.childNodes))
+    }
+
+    // defer to ensure HTML is in DOM
+    window.setTimeout(() => {
+      enhanceChapter1EnvSteps()
+      enhanceCopyButtons()
+    }, 0)
+  }, [started, currentIdx])
 
   return (
     <div className="page">
@@ -146,7 +270,14 @@ function App() {
                     진행률 {progress}% - {currentIdx + 1}/{chapters.length} 챕터
                   </div>
                 </div>
-                <div className="ch-body" dangerouslySetInnerHTML={{ __html: chapterContent[current.id] }} />
+                <div
+                  className="ch-body"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      chapterContent[current.id] ??
+                      `<div class="section-card"><div class="hl-box hl-info">원본 챕터 콘텐츠를 찾지 못했습니다.</div></div>`,
+                  }}
+                />
               </div>
             </div>
           </main>
