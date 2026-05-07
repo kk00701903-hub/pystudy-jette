@@ -20,7 +20,7 @@ const chapters: Chapter[] = [
   { id: 'ch05', num: 5, emoji: '📝', title: '워드 다루기', desc: 'python-docx로 공문/문서 자동 생성을 실습합니다', tags: ['python-docx'], items: ['공문 자동 생성', '템플릿 치환'] },
   { id: 'ch06', num: 6, emoji: '🔍', title: 'PDF 정보 추출하기', desc: 'pdfplumber 기반 정보 추출 자동화를 다룹니다', tags: ['pdfplumber', 'regex'], items: ['계약정보 추출', 'Streamlit 연동'] },
   { id: 'ch07', num: 7, emoji: '📧', title: '이메일 자동화하기', desc: 'SMTP와 첨부파일 자동 발송을 구현합니다', tags: ['SMTP', '이메일'], items: ['설정', '자동 발송'] },
-  { id: 'ch08', num: 8, emoji: '🤖', title: 'OpenAI API', desc: '회의록 요약 등 실무 예제를 통해 API를 연습합니다', tags: ['OpenAI', '요약'], items: ['키 설정', '요약 실습'] },
+  { id: 'ch08', num: 8, emoji: '🤖', title: 'OpenAI API (테스트목적 사용)', desc: '회의록 요약 등 실무 예제를 통해 API를 연습합니다', tags: ['OpenAI', '요약'], items: ['키 설정', '요약 실습'] },
   { id: 'ch09', num: 9, emoji: '✍️', title: '메시지 분석과 생성하기', desc: '광고문구 생성과 인사이트 도출 패턴을 실습합니다', tags: ['프롬프트'], items: ['카피 생성', '인사이트'] },
   { id: 'ch10', num: 10, emoji: '⛓️', title: 'LangChain 요약 자동화하기', desc: 'YouTube/웹 문서 요약 파이프라인을 구성합니다', tags: ['LangChain'], items: ['요약 체인', '문서 로더'] },
   { id: 'ch11', num: 11, emoji: '🧠', title: '문서 기반 질문응답(RAG)', desc: '벡터 검색 기반 RAG를 구성합니다', tags: ['RAG', 'FAISS'], items: ['개념', '실습'] },
