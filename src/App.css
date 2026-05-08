@@ -159,6 +159,30 @@
   font-weight: 800;
 }
 
+.nav-test-split {
+  padding: 0 10px;
+}
+
+.nav-test-split-line {
+  height: 0;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  margin: 8px 0 0;
+}
+
+.nav-test-only-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  padding: 6px 10px 0;
+}
+
+.nav-test-only-spacer {
+  min-height: 8px;
+}
+
 .main-area {
   flex: 1;
   display: flex;
@@ -501,6 +525,49 @@
   font-size: 0.76rem;
   line-height: 1.8;
   white-space: pre;
+}
+
+.excel-sample {
+  margin-top: 12px;
+  padding: 12px 14px 14px;
+  border-radius: 10px;
+  border: 1px dashed rgba(37, 99, 235, 0.4);
+  background: rgba(239, 246, 255, 0.65);
+}
+
+.excel-sample-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 6px;
+}
+
+.excel-sample-hint {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0 0 10px;
+}
+
+.ch-body .code-block.excel-paste-block {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  margin-top: 0;
+}
+
+.ch-body .code-block.excel-paste-block pre {
+  color: #0f172a;
+}
+
+.code-wrap:has(.excel-paste-block) .copy-btn {
+  background: rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 23, 42, 0.14);
+  color: #334155;
+}
+
+.code-wrap:has(.excel-paste-block) .copy-btn:hover {
+  background: rgba(15, 23, 42, 0.12);
+  color: #0f172a;
 }
 
 .code-hl {
